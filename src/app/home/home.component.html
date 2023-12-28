@@ -1,0 +1,33 @@
+﻿<!-- <div class="card mt-4">
+    <h4 class="card-header">VISA Stauts</h4>
+    <div class="card-body">
+        <h6>Users from secure api end point</h6>
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <ul *ngIf="users">
+            <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+        </ul>
+    </div>
+</div> -->
+
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="flex flex-wrap -m-4" >
+            <div class="p-4 lg:w-2/2 md:w-full" *ngFor="let user of users">
+                <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->
+                <div
+                    class="block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                    <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                        <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/182.jpg"
+                            alt="" />
+                    </div>
+                    <div class="p-6" *ngIf="users">
+                        <p class="text-base text-neutral-600 dark:text-neutral-200">
+                            {{user.firstName}} {{user.lastName}}.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
